@@ -1,0 +1,9 @@
+{
+  "name": "yld-landing-page-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/yld-landing-page-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["yld-landing-page"],
+  "// targets": "to see all targets run: nx show project yld-landing-page-e2e --web",
+  "targets": {}
+}

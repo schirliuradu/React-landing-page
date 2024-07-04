@@ -39,12 +39,6 @@ pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     Liberation Mono, Courier New, monospace;
 }
-svg {
-  display: block;
-  vertical-align: middle;
-  shape-rendering: auto;
-  text-rendering: optimizeLegibility;
-}
 pre {
   background-color: rgba(55, 65, 81, 1);
   border-radius: 0.25rem;
@@ -61,9 +55,6 @@ pre {
 }
 .rounded {
   border-radius: 1.5rem;
-}
-.wrapper {
-  width: 100%;
 }
 .container {
   margin-left: auto;

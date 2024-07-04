@@ -1,5 +1,6 @@
 import './global.css';
 import { StyledComponentsRegistry } from './registry';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
 export const metadata = {
   title: 'Welcome to demo2',
@@ -14,7 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <AppRouterCacheProvider>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );

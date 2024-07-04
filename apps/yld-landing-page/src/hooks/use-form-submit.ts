@@ -40,7 +40,7 @@ export const useFormSubmit = (
       setErrors([]);
     }
 
-    void saveUserData(data, setIsSubmitted);
+    void saveUserData(endpoint, data, setIsSubmitted);
   };
 
   const checkFieldError = (field: string) => {
@@ -51,11 +51,14 @@ export const useFormSubmit = (
 };
 
 const saveUserData = async (
+  endpoint: string,
   data: Record<string, string>,
   setIsSubmitted: (isSubmitted: boolean) => void
 ) => {
+  const baseUri = 'http://localhost:3000'; // TODO: read from env
+
   try {
-    await axios.post('http://localhost:3000/api/marketing/send-lead/v1', data);
+    await axios.post(`${baseUri}${endpoint}`, data);
 
     setIsSubmitted(true);
   } catch (error) {

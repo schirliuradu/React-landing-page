@@ -14,7 +14,7 @@ import { MarketingFormValidator } from '../../../../helpers/validators/forms/mar
 export default function Landing() {
   const marketingForm = (
     <MarketingForm
-      endpoint="https://localhost:3000/send-lead" // TODO: read from env
+      endpoint="/api/marketing/send-lead/v1"
       validator={new MarketingFormValidator()}
     />
   );
